@@ -125,10 +125,14 @@ function add(num) {
  * [2] Invoking `processProduct` passing 25 and 0 and `(num) => num + 1000`,
  * should return 1000.
 */
-function processProduct(/* CODE HERE */) {
+function processProduct(num1, num2, callback) {
   /* CODE HERE */
+  return callback(num1 * num2);
 }
 
+function add(num) {
+  return num + " is a big Number"
+}
 /**
  * ### Challenge `processContains`
  * 
