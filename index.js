@@ -153,9 +153,11 @@ function add(num) {
  * "lady gaga" and `['foo', 'bar']` and `(bool) => bool ? 'nice!' : 'sad'`,
  * should return "sad".
 */
-function processContains(/* CODE HERE */) {
+function processContains(item, list, callback) {
   /* CODE HERE */
+  return callback(list.includes(item));
 }
+
 
 /**
  * ### Challenge `processDuplicateFree`
@@ -198,9 +200,14 @@ function processDuplicateFree(/* CODE HERE ONLY AFTER COMPLETING ALL OTHER TASKS
  * @returns an array with all the runners' full names in the following format: "Smith, John".
  * The full names appear in the array in the same order the runners appear in the `runners` array.
 */
-function getFullNames(/* CODE HERE */) {
+function getFullNames(runners) {
   /* CODE HERE */
+  const arr = [];
+  runners.forEach(r => arr.push(`${r.last_name}, ${r.first_name}`));
+  
+  return arr;
 }
+
 
 /**
  * ### Challenge `firstNamesAllCaps`
